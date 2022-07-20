@@ -5,21 +5,21 @@
 class Pro < Formula
   desc ""
   homepage "https://github.com/wowu/pro"
-  version "0.1.2"
+  version "0.1.3"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/Wowu/pro/releases/download/v0.1.2/pro_0.1.2_darwin_arm64.tar.gz"
-      sha256 "667abee09fa89f19c2253fff7555e4c0188a0a007b4dd2c54a38030d4c5b98a6"
+    if Hardware::CPU.intel?
+      url "https://github.com/Wowu/pro/releases/download/v0.1.3/pro_0.1.3_darwin_amd64.tar.gz"
+      sha256 "5e4337940ca24162b9378a85bfb93963f48d09da5f4ddf74048d411718ecb8ff"
 
       def install
         bin.install "pro"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/Wowu/pro/releases/download/v0.1.2/pro_0.1.2_darwin_amd64.tar.gz"
-      sha256 "5595da76dd55c7aa32c0e9c07347fa26eef6d1513e13777bc685924b8ace00dc"
+    if Hardware::CPU.arm?
+      url "https://github.com/Wowu/pro/releases/download/v0.1.3/pro_0.1.3_darwin_arm64.tar.gz"
+      sha256 "cb914b27f75adbd6913c44621506f577126b98f4e8c4ee8ddaf4e8a98d0dba04"
 
       def install
         bin.install "pro"
@@ -28,17 +28,17 @@ class Pro < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/Wowu/pro/releases/download/v0.1.2/pro_0.1.2_linux_amd64.tar.gz"
-      sha256 "115fa7f441f7a034acab0a932b9e99bce1766f0e936d9d2bae396f86ac9349be"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/Wowu/pro/releases/download/v0.1.3/pro_0.1.3_linux_arm64.tar.gz"
+      sha256 "ef5cda0bc2bcdfc786ca83f5188a7e3ed3d2e0efe7a0171c52b93495a9110072"
 
       def install
         bin.install "pro"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Wowu/pro/releases/download/v0.1.2/pro_0.1.2_linux_arm64.tar.gz"
-      sha256 "7c190f9dbea233018150ad389029dd14070f6a698ff634d656cf2f82377fb9e8"
+    if Hardware::CPU.intel?
+      url "https://github.com/Wowu/pro/releases/download/v0.1.3/pro_0.1.3_linux_amd64.tar.gz"
+      sha256 "5c28acb91b6f2cd5bb58f8215321e881df76846df429d77e72236e34470682b7"
 
       def install
         bin.install "pro"
