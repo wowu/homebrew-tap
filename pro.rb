@@ -11,7 +11,7 @@ class Pro < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/Wowu/pro/releases/download/v0.1.1/pro_0.1.1_darwin_amd64.tar.gz"
-      sha256 "07779d98dbc4b82576dfddb8582b7f735088f2e9aacc1615c7448ec8e3fa51da"
+      sha256 "a482498fc8f8cd31818a7a3cff79333887fa3ea3c1072793742a8cb66f429bf4"
 
       def install
         bin.install "pro"
@@ -19,7 +19,7 @@ class Pro < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/Wowu/pro/releases/download/v0.1.1/pro_0.1.1_darwin_arm64.tar.gz"
-      sha256 "715f47907d58a6a127f00ee2cdd240bfb0aeb25803efbf720fbfec126c31150c"
+      sha256 "0619afb20ed7b4035c2cd6a77e3a8d80aafbecdf42864727a2de0bea80e5270a"
 
       def install
         bin.install "pro"
@@ -30,7 +30,7 @@ class Pro < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/Wowu/pro/releases/download/v0.1.1/pro_0.1.1_linux_amd64.tar.gz"
-      sha256 "6cbb1d79e0bc4347797982dda3bdbd8548ace4948462bd0916e6cba61238dd14"
+      sha256 "24e2db2812cf12174097892971aa4e26f1377c919c29bad74de49b47fb5f062c"
 
       def install
         bin.install "pro"
@@ -38,7 +38,7 @@ class Pro < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/Wowu/pro/releases/download/v0.1.1/pro_0.1.1_linux_arm64.tar.gz"
-      sha256 "2f123f65dd23c0e67a54203ffb752a8a04f0c519e7c2fc6acdd8aa42adbb270f"
+      sha256 "7d9b75b24cae7af96ed7ae1b4b887d0989b2ebec46d92f1d3585ec262c6dafe1"
 
       def install
         bin.install "pro"
