@@ -5,21 +5,21 @@
 class Pro < Formula
   desc ""
   homepage "https://github.com/wowu/pro"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/Wowu/pro/releases/download/v0.1.1/pro_0.1.1_darwin_amd64.tar.gz"
-      sha256 "a482498fc8f8cd31818a7a3cff79333887fa3ea3c1072793742a8cb66f429bf4"
+    if Hardware::CPU.arm?
+      url "https://github.com/Wowu/pro/releases/download/v0.1.2/pro_0.1.2_darwin_arm64.tar.gz"
+      sha256 "667abee09fa89f19c2253fff7555e4c0188a0a007b4dd2c54a38030d4c5b98a6"
 
       def install
         bin.install "pro"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/Wowu/pro/releases/download/v0.1.1/pro_0.1.1_darwin_arm64.tar.gz"
-      sha256 "0619afb20ed7b4035c2cd6a77e3a8d80aafbecdf42864727a2de0bea80e5270a"
+    if Hardware::CPU.intel?
+      url "https://github.com/Wowu/pro/releases/download/v0.1.2/pro_0.1.2_darwin_amd64.tar.gz"
+      sha256 "5595da76dd55c7aa32c0e9c07347fa26eef6d1513e13777bc685924b8ace00dc"
 
       def install
         bin.install "pro"
@@ -29,16 +29,16 @@ class Pro < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/Wowu/pro/releases/download/v0.1.1/pro_0.1.1_linux_amd64.tar.gz"
-      sha256 "24e2db2812cf12174097892971aa4e26f1377c919c29bad74de49b47fb5f062c"
+      url "https://github.com/Wowu/pro/releases/download/v0.1.2/pro_0.1.2_linux_amd64.tar.gz"
+      sha256 "115fa7f441f7a034acab0a932b9e99bce1766f0e936d9d2bae396f86ac9349be"
 
       def install
         bin.install "pro"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Wowu/pro/releases/download/v0.1.1/pro_0.1.1_linux_arm64.tar.gz"
-      sha256 "7d9b75b24cae7af96ed7ae1b4b887d0989b2ebec46d92f1d3585ec262c6dafe1"
+      url "https://github.com/Wowu/pro/releases/download/v0.1.2/pro_0.1.2_linux_arm64.tar.gz"
+      sha256 "7c190f9dbea233018150ad389029dd14070f6a698ff634d656cf2f82377fb9e8"
 
       def install
         bin.install "pro"
