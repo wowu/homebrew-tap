@@ -5,40 +5,40 @@
 class Pro < Formula
   desc ""
   homepage "https://github.com/wowu/pro"
-  version "0.2.1"
+  version "0.2.2"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/Wowu/pro/releases/download/v0.2.1/pro-darwin-amd64"
-      sha256 "223322147c21212626b357a52d606ed7516ebb3d9c0a0f07f887df5ff637345e"
-
-      def install
-        bin.install "pro-darwin-amd64" => "pro"
-      end
-    end
     if Hardware::CPU.arm?
-      url "https://github.com/Wowu/pro/releases/download/v0.2.1/pro-darwin-arm64"
-      sha256 "2b509bb4daea399649c30a16e70e3dae7465006fef1f4748c86396174836742b"
+      url "https://github.com/Wowu/pro/releases/download/v0.2.2/pro-darwin-arm64"
+      sha256 "f1f7d031f0752718e4ed653ecf145e32828d1e2bc2e01c3cbfcffe0d2e42c394"
 
       def install
         bin.install "pro-darwin-arm64" => "pro"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/Wowu/pro/releases/download/v0.2.2/pro-darwin-amd64"
+      sha256 "cbd34b85c5edc26d246bbb74fb679adb65a8ee68e11227c37c4ae23f8fa708c3"
+
+      def install
+        bin.install "pro-darwin-amd64" => "pro"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/Wowu/pro/releases/download/v0.2.1/pro-linux-amd64"
-      sha256 "ac556961b76a8bbe3ffd29ef75f8912052c004aa64004a5e0f951860af1c7f74"
+      url "https://github.com/Wowu/pro/releases/download/v0.2.2/pro-linux-amd64"
+      sha256 "0f24aa36618c9f3bea0371a9f7d3bc87bc4d7d419937d60a82a52afbd99a3dca"
 
       def install
         bin.install "pro-linux-amd64" => "pro"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Wowu/pro/releases/download/v0.2.1/pro-linux-arm64"
-      sha256 "5c3074e46b0c8b80f4bb76230640ee930353961655bfe1c9cd5167c6769ca1df"
+      url "https://github.com/Wowu/pro/releases/download/v0.2.2/pro-linux-arm64"
+      sha256 "ae928718b40c1a996abbd16730239b397bf61ac336e761faafd3e90070a55251"
 
       def install
         bin.install "pro-linux-arm64" => "pro"
