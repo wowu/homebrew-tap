@@ -5,43 +5,47 @@
 class Pro < Formula
   desc ""
   homepage "https://github.com/wowu/pro"
-  version "0.3.1"
+  version "0.3.2"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/Wowu/pro/releases/download/v0.3.1/pro-darwin-arm64"
-      sha256 "9c72fa51aa8239363a3ec00d501bb02cd00892d48fe40f64c854ba951957a46a"
-
-      def install
-        bin.install "pro-darwin-arm64" => "pro"
-      end
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/Wowu/pro/releases/download/v0.3.1/pro-darwin-amd64"
-      sha256 "a1f3f27ae3a6a65485b4dd0fed8dcfd683778986953172a43b25589d6c790be4"
+    on_intel do
+      url "https://github.com/wowu/pro/releases/download/v0.3.2/pro-darwin-amd64"
+      sha256 "f831861ae46181b774c1f314b3f0f695c83778c1c80cb50c13a18c969f683ad1"
 
       def install
         bin.install "pro-darwin-amd64" => "pro"
       end
     end
+    on_arm do
+      url "https://github.com/wowu/pro/releases/download/v0.3.2/pro-darwin-arm64"
+      sha256 "c7e982e1a8532144a7cd3052c2659ee5509010b3df36459445d968835b0cf97e"
+
+      def install
+        bin.install "pro-darwin-arm64" => "pro"
+      end
+    end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/Wowu/pro/releases/download/v0.3.1/pro-linux-amd64"
-      sha256 "066ae192da6e23b1cfae11a5adb34ea25502b431be3f5e3315bd395f3d0515d7"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/wowu/pro/releases/download/v0.3.2/pro-linux-amd64"
+        sha256 "1ea55d0755770b1d34ebd75343273a3f5badce8eaefefa9ed771c5b2345e34d3"
 
-      def install
-        bin.install "pro-linux-amd64" => "pro"
+        def install
+          bin.install "pro-linux-amd64" => "pro"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Wowu/pro/releases/download/v0.3.1/pro-linux-arm64"
-      sha256 "a991aba5f2ca8ed6f58a2befe8f05635b33e96387afa724a4052c95201ae81df"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/wowu/pro/releases/download/v0.3.2/pro-linux-arm64"
+        sha256 "afdf61b7dced612e05a350852a86eff44a349898b91d2b68d052b4099df11488"
 
-      def install
-        bin.install "pro-linux-arm64" => "pro"
+        def install
+          bin.install "pro-linux-arm64" => "pro"
+        end
       end
     end
   end
