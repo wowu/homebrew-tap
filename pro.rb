@@ -5,21 +5,21 @@
 class Pro < Formula
   desc ""
   homepage "https://github.com/wowu/pro"
-  version "0.4.1"
+  version "0.5.0"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/wowu/pro/releases/download/v0.4.1/pro-darwin-amd64"
-      sha256 "87a207e9f47c73f54f75757bd43e89a4cd5f33b81ddc4355880a906cea3cfb41"
+      url "https://github.com/wowu/pro/releases/download/v0.5.0/pro-darwin-amd64"
+      sha256 "f5435688abdc0884975d91c5d27c6b0945fac0030e2bd04971e53696a7b55326"
 
       def install
         bin.install "pro-darwin-amd64" => "pro"
       end
     end
     on_arm do
-      url "https://github.com/wowu/pro/releases/download/v0.4.1/pro-darwin-arm64"
-      sha256 "8cb7c78263e2ec04537a6e22f6673de6e9c6ce694c7f9e970c8f4036a35c1757"
+      url "https://github.com/wowu/pro/releases/download/v0.5.0/pro-darwin-arm64"
+      sha256 "32e7017d6931648365b8d49947728df1131a5a71e4dc18782f2d99ee420708f4"
 
       def install
         bin.install "pro-darwin-arm64" => "pro"
@@ -30,8 +30,8 @@ class Pro < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/wowu/pro/releases/download/v0.4.1/pro-linux-amd64"
-        sha256 "75fbea6527e0630379d61434301f7b08fdba2862cee4d331052ca31abc17e53e"
+        url "https://github.com/wowu/pro/releases/download/v0.5.0/pro-linux-amd64"
+        sha256 "849dd8b450a292c755daa81b77a872a439ca915346e83321e39a71f20c088cf3"
 
         def install
           bin.install "pro-linux-amd64" => "pro"
@@ -40,8 +40,8 @@ class Pro < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/wowu/pro/releases/download/v0.4.1/pro-linux-arm64"
-        sha256 "86a0cbefd32b831e7d9d09ec7b44e75b3e0bd50a626cd2eeeab49422f2b4769d"
+        url "https://github.com/wowu/pro/releases/download/v0.5.0/pro-linux-arm64"
+        sha256 "9aaeeb65df1dabed1e57ab3f16a62f1246222c3078a99022e23700bb9c531887"
 
         def install
           bin.install "pro-linux-arm64" => "pro"
